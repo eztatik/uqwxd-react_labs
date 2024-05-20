@@ -1,12 +1,22 @@
-import React from 'react'
-import { useDispatch} from 'react-redux';
-import increment from '../actions'
+import React from "react";
+import { useDispatch } from "react-redux";
+import increment from "../actions";
+import incrementTwo from "../actions";
 
-const MyButton = ()=>{
-    let dispatch = useDispatch();
-    return (
-        <button onClick={()=>dispatch(increment(1))}>Increase counter</button>
-    );
-}
+const MyButton = () => {
+  let dispatch = useDispatch();
+  return (
+    <button onClick={() => dispatch(increment(1))}>Increase counter</button>
+  );
+};
 
-export default MyButton;
+const MyButtonTwo = () => {
+  let dispatch = useDispatch();
+  return (
+    <button onClick={() => dispatch(incrementTwo(1))}>
+      Increase counter 2
+    </button>
+  );
+};
+
+export default (MyButton, MyButtonTwo);
